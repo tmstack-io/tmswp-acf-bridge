@@ -1,0 +1,19 @@
+{
+    "key": "group_clone_source",
+    "title": "cloneの参照元",
+    "location": [[{"param": "post_type", "operator": "==", "value": "clone_source"}]],
+    "fields": [
+        {"key": "field_cs_headline", "name": "headline", "label": "見出し", "type": "text"},
+        {"key": "field_cs_starts_on", "name": "starts_on", "label": "開始日", "type": "date_picker"},
+        {"key": "field_cs_photo", "name": "photo", "label": "写真", "type": "image", "return_format": "id"},
+        {"key": "field_cs_related", "name": "related", "label": "関連", "type": "post_object", "return_format": "object"},
+        {"key": "field_cs_extra", "name": "extra", "label": "その他", "type": "google_map"},
+        {
+            "key": "field_cs_links",
+            "name": "links",
+            "label": "リンク",
+            "type": "repeater",
+            "sub_fields": [{"key": "field_cs_links_url", "name": "url", "label": "URL", "type": "url"}]
+        }
+    ]
+}

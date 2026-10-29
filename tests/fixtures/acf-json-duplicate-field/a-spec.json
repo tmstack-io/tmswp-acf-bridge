@@ -1,0 +1,27 @@
+{
+    "key": "group_spec",
+    "title": "仕様",
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "product"
+            }
+        ]
+    ],
+    "fields": [
+        {
+            "key": "field_spec_price",
+            "name": "price",
+            "label": "仕様の価格",
+            "type": "number"
+        },
+        {
+            "key": "field_weight",
+            "name": "weight",
+            "label": "重さ",
+            "type": "number"
+        }
+    ]
+}

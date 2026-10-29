@@ -1,0 +1,27 @@
+{
+    "key": "group_basic",
+    "title": "基本",
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "product"
+            }
+        ]
+    ],
+    "fields": [
+        {
+            "key": "field_price",
+            "name": "price",
+            "label": "価格",
+            "type": "number"
+        },
+        {
+            "key": "field_color",
+            "name": "color",
+            "label": "色",
+            "type": "text"
+        }
+    ]
+}

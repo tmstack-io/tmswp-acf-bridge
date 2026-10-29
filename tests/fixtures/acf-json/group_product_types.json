@@ -1,0 +1,1062 @@
+{
+    "key": "group_product_types",
+    "title": "製品の全型",
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "product"
+            }
+        ]
+    ],
+    "fields": [
+        {
+            "key": "field_t_text_value",
+            "name": "text_value",
+            "label": "テキスト",
+            "type": "text"
+        },
+        {
+            "key": "field_t_textarea_value",
+            "name": "textarea_value",
+            "label": "textarea_value",
+            "type": "textarea"
+        },
+        {
+            "key": "field_t_email_value",
+            "name": "email_value",
+            "label": "email_value",
+            "type": "email"
+        },
+        {
+            "key": "field_t_url_value",
+            "name": "url_value",
+            "label": "url_value",
+            "type": "url"
+        },
+        {
+            "key": "field_t_password_value",
+            "name": "password_value",
+            "label": "password_value",
+            "type": "password"
+        },
+        {
+            "key": "field_t_wysiwyg_value",
+            "name": "wysiwyg_value",
+            "label": "wysiwyg_value",
+            "type": "wysiwyg"
+        },
+        {
+            "key": "field_t_oembed_value",
+            "name": "oembed_value",
+            "label": "oembed_value",
+            "type": "oembed"
+        },
+        {
+            "key": "field_t_range_value",
+            "name": "range_value",
+            "label": "range_value",
+            "type": "range"
+        },
+        {
+            "key": "field_t_true_false_value",
+            "name": "true_false_value",
+            "label": "true_false_value",
+            "type": "true_false"
+        },
+        {
+            "key": "field_t_select_value",
+            "name": "select_value",
+            "label": "select_value",
+            "type": "select",
+            "choices": {
+                "red": "Red",
+                "blue": "Blue"
+            },
+            "return_format": "value"
+        },
+        {
+            "key": "field_t_select_label",
+            "name": "select_label",
+            "label": "select_label",
+            "type": "select",
+            "choices": {
+                "red": "Red",
+                "blue": "Blue"
+            },
+            "return_format": "label"
+        },
+        {
+            "key": "field_t_select_array",
+            "name": "select_array",
+            "label": "select_array",
+            "type": "select",
+            "choices": {
+                "red": "Red",
+                "blue": "Blue"
+            },
+            "return_format": "array"
+        },
+        {
+            "key": "field_t_select_multiple_value",
+            "name": "select_multiple_value",
+            "label": "select_multiple_value",
+            "type": "select",
+            "choices": {
+                "red": "Red",
+                "blue": "Blue"
+            },
+            "multiple": 1,
+            "return_format": "value"
+        },
+        {
+            "key": "field_t_select_multiple_label",
+            "name": "select_multiple_label",
+            "label": "select_multiple_label",
+            "type": "select",
+            "choices": {
+                "red": "Red",
+                "blue": "Blue"
+            },
+            "multiple": 1,
+            "return_format": "label"
+        },
+        {
+            "key": "field_t_select_multiple_array",
+            "name": "select_multiple_array",
+            "label": "select_multiple_array",
+            "type": "select",
+            "choices": {
+                "red": "Red",
+                "blue": "Blue"
+            },
+            "multiple": 1,
+            "return_format": "array"
+        },
+        {
+            "key": "field_t_checkbox_value",
+            "name": "checkbox_value",
+            "label": "checkbox_value",
+            "type": "checkbox",
+            "choices": {
+                "red": "Red",
+                "blue": "Blue"
+            },
+            "return_format": "value"
+        },
+        {
+            "key": "field_t_checkbox_label",
+            "name": "checkbox_label",
+            "label": "checkbox_label",
+            "type": "checkbox",
+            "choices": {
+                "red": "Red",
+                "blue": "Blue"
+            },
+            "return_format": "label"
+        },
+        {
+            "key": "field_t_checkbox_array",
+            "name": "checkbox_array",
+            "label": "checkbox_array",
+            "type": "checkbox",
+            "choices": {
+                "red": "Red",
+                "blue": "Blue"
+            },
+            "return_format": "array"
+        },
+        {
+            "key": "field_t_radio_value",
+            "name": "radio_value",
+            "label": "radio_value",
+            "type": "radio",
+            "choices": {
+                "red": "Red",
+                "blue": "Blue"
+            },
+            "return_format": "value"
+        },
+        {
+            "key": "field_t_radio_label",
+            "name": "radio_label",
+            "label": "radio_label",
+            "type": "radio",
+            "choices": {
+                "red": "Red",
+                "blue": "Blue"
+            },
+            "return_format": "label"
+        },
+        {
+            "key": "field_t_radio_array",
+            "name": "radio_array",
+            "label": "radio_array",
+            "type": "radio",
+            "choices": {
+                "red": "Red",
+                "blue": "Blue"
+            },
+            "return_format": "array"
+        },
+        {
+            "key": "field_t_button_group_value",
+            "name": "button_group_value",
+            "label": "button_group_value",
+            "type": "button_group",
+            "choices": {
+                "red": "Red",
+                "blue": "Blue"
+            },
+            "return_format": "value"
+        },
+        {
+            "key": "field_t_button_group_label",
+            "name": "button_group_label",
+            "label": "button_group_label",
+            "type": "button_group",
+            "choices": {
+                "red": "Red",
+                "blue": "Blue"
+            },
+            "return_format": "label"
+        },
+        {
+            "key": "field_t_button_group_array",
+            "name": "button_group_array",
+            "label": "button_group_array",
+            "type": "button_group",
+            "choices": {
+                "red": "Red",
+                "blue": "Blue"
+            },
+            "return_format": "array"
+        },
+        {
+            "key": "field_t_image_id",
+            "name": "image_id",
+            "label": "image_id",
+            "type": "image",
+            "return_format": "id"
+        },
+        {
+            "key": "field_t_image_url",
+            "name": "image_url",
+            "label": "image_url",
+            "type": "image",
+            "return_format": "url"
+        },
+        {
+            "key": "field_t_file_array",
+            "name": "file_array",
+            "label": "file_array",
+            "type": "file",
+            "return_format": "array"
+        },
+        {
+            "key": "field_t_file_id",
+            "name": "file_id",
+            "label": "file_id",
+            "type": "file",
+            "return_format": "id"
+        },
+        {
+            "key": "field_t_file_url",
+            "name": "file_url",
+            "label": "file_url",
+            "type": "file",
+            "return_format": "url"
+        },
+        {
+            "key": "field_t_gallery_array",
+            "name": "gallery_array",
+            "label": "gallery_array",
+            "type": "gallery",
+            "return_format": "array"
+        },
+        {
+            "key": "field_t_gallery_id",
+            "name": "gallery_id",
+            "label": "gallery_id",
+            "type": "gallery",
+            "return_format": "id"
+        },
+        {
+            "key": "field_t_gallery_url",
+            "name": "gallery_url",
+            "label": "gallery_url",
+            "type": "gallery",
+            "return_format": "url"
+        },
+        {
+            "key": "field_t_link_array",
+            "name": "link_array",
+            "label": "link_array",
+            "type": "link",
+            "return_format": "array"
+        },
+        {
+            "key": "field_t_link_url",
+            "name": "link_url",
+            "label": "link_url",
+            "type": "link",
+            "return_format": "url"
+        },
+        {
+            "key": "field_t_post_object_object",
+            "name": "post_object_object",
+            "label": "post_object_object",
+            "type": "post_object",
+            "return_format": "object"
+        },
+        {
+            "key": "field_t_post_object_id",
+            "name": "post_object_id",
+            "label": "post_object_id",
+            "type": "post_object",
+            "return_format": "id"
+        },
+        {
+            "key": "field_t_post_object_multiple_object",
+            "name": "post_object_multiple_object",
+            "label": "post_object_multiple_object",
+            "type": "post_object",
+            "multiple": 1,
+            "return_format": "object"
+        },
+        {
+            "key": "field_t_post_object_multiple_id",
+            "name": "post_object_multiple_id",
+            "label": "post_object_multiple_id",
+            "type": "post_object",
+            "multiple": 1,
+            "return_format": "id"
+        },
+        {
+            "key": "field_t_page_link_single",
+            "name": "page_link_single",
+            "label": "page_link_single",
+            "type": "page_link"
+        },
+        {
+            "key": "field_t_page_link_multiple",
+            "name": "page_link_multiple",
+            "label": "page_link_multiple",
+            "type": "page_link",
+            "multiple": 1
+        },
+        {
+            "key": "field_t_relationship_object",
+            "name": "relationship_object",
+            "label": "relationship_object",
+            "type": "relationship",
+            "return_format": "object"
+        },
+        {
+            "key": "field_t_relationship_id",
+            "name": "relationship_id",
+            "label": "relationship_id",
+            "type": "relationship",
+            "return_format": "id"
+        },
+        {
+            "key": "field_t_taxonomy_select_object",
+            "name": "taxonomy_select_object",
+            "label": "taxonomy_select_object",
+            "type": "taxonomy",
+            "taxonomy": "category",
+            "field_type": "select",
+            "return_format": "object"
+        },
+        {
+            "key": "field_t_taxonomy_select_id",
+            "name": "taxonomy_select_id",
+            "label": "taxonomy_select_id",
+            "type": "taxonomy",
+            "taxonomy": "category",
+            "field_type": "select",
+            "return_format": "id"
+        },
+        {
+            "key": "field_t_taxonomy_radio_object",
+            "name": "taxonomy_radio_object",
+            "label": "taxonomy_radio_object",
+            "type": "taxonomy",
+            "taxonomy": "category",
+            "field_type": "radio",
+            "return_format": "object"
+        },
+        {
+            "key": "field_t_taxonomy_radio_id",
+            "name": "taxonomy_radio_id",
+            "label": "taxonomy_radio_id",
+            "type": "taxonomy",
+            "taxonomy": "category",
+            "field_type": "radio",
+            "return_format": "id"
+        },
+        {
+            "key": "field_t_taxonomy_checkbox_object",
+            "name": "taxonomy_checkbox_object",
+            "label": "taxonomy_checkbox_object",
+            "type": "taxonomy",
+            "taxonomy": "category",
+            "field_type": "checkbox",
+            "return_format": "object"
+        },
+        {
+            "key": "field_t_taxonomy_checkbox_id",
+            "name": "taxonomy_checkbox_id",
+            "label": "taxonomy_checkbox_id",
+            "type": "taxonomy",
+            "taxonomy": "category",
+            "field_type": "checkbox",
+            "return_format": "id"
+        },
+        {
+            "key": "field_t_taxonomy_multi_select_object",
+            "name": "taxonomy_multi_select_object",
+            "label": "taxonomy_multi_select_object",
+            "type": "taxonomy",
+            "taxonomy": "category",
+            "field_type": "multi_select",
+            "return_format": "object"
+        },
+        {
+            "key": "field_t_taxonomy_multi_select_id",
+            "name": "taxonomy_multi_select_id",
+            "label": "taxonomy_multi_select_id",
+            "type": "taxonomy",
+            "taxonomy": "category",
+            "field_type": "multi_select",
+            "return_format": "id"
+        },
+        {
+            "key": "field_t_user_array",
+            "name": "user_array",
+            "label": "user_array",
+            "type": "user",
+            "return_format": "array"
+        },
+        {
+            "key": "field_t_user_object",
+            "name": "user_object",
+            "label": "user_object",
+            "type": "user",
+            "return_format": "object"
+        },
+        {
+            "key": "field_t_user_id",
+            "name": "user_id",
+            "label": "user_id",
+            "type": "user",
+            "return_format": "id"
+        },
+        {
+            "key": "field_t_user_multiple_array",
+            "name": "user_multiple_array",
+            "label": "user_multiple_array",
+            "type": "user",
+            "multiple": 1,
+            "return_format": "array"
+        },
+        {
+            "key": "field_t_user_multiple_object",
+            "name": "user_multiple_object",
+            "label": "user_multiple_object",
+            "type": "user",
+            "multiple": 1,
+            "return_format": "object"
+        },
+        {
+            "key": "field_t_user_multiple_id",
+            "name": "user_multiple_id",
+            "label": "user_multiple_id",
+            "type": "user",
+            "multiple": 1,
+            "return_format": "id"
+        },
+        {
+            "key": "field_t_date_picker_value",
+            "name": "date_picker_value",
+            "label": "date_picker_value",
+            "type": "date_picker",
+            "return_format": "Y/m/d"
+        },
+        {
+            "key": "field_t_time_picker_value",
+            "name": "time_picker_value",
+            "label": "time_picker_value",
+            "type": "time_picker",
+            "return_format": "H:i"
+        },
+        {
+            "key": "field_t_color_string",
+            "name": "color_string",
+            "label": "color_string",
+            "type": "color_picker",
+            "return_format": "string"
+        },
+        {
+            "key": "field_t_color_array",
+            "name": "color_array",
+            "label": "color_array",
+            "type": "color_picker",
+            "return_format": "array",
+            "enable_opacity": 1
+        },
+        {
+            "key": "field_t_message_note",
+            "name": "message_note",
+            "label": "注意書き",
+            "type": "message",
+            "message": "値を持たない"
+        },
+        {
+            "key": "field_t_tab_basic",
+            "name": "tab_basic",
+            "label": "基本",
+            "type": "tab"
+        },
+        {
+            "key": "field_t_accordion_more",
+            "name": "accordion_more",
+            "label": "詳細",
+            "type": "accordion"
+        },
+        {
+            "key": "field_t_map_value",
+            "name": "map_value",
+            "label": "地図",
+            "type": "google_map"
+        },
+        {
+            "key": "field_t_group_value",
+            "name": "group_value",
+            "label": "グループ",
+            "type": "group",
+            "sub_fields": [
+                {
+                    "key": "field_t_group_title",
+                    "name": "title",
+                    "label": "title",
+                    "type": "text"
+                },
+                {
+                    "key": "field_t_group_choice",
+                    "name": "choice",
+                    "label": "choice",
+                    "type": "select",
+                    "choices": {
+                        "red": "Red",
+                        "blue": "Blue"
+                    }
+                },
+                {
+                    "key": "field_t_group_amount",
+                    "name": "amount",
+                    "label": "amount",
+                    "type": "number"
+                },
+                {
+                    "key": "field_t_group_photo_id",
+                    "name": "photo_id",
+                    "label": "photo_id",
+                    "type": "image",
+                    "return_format": "id"
+                },
+                {
+                    "key": "field_t_group_enabled",
+                    "name": "enabled",
+                    "label": "enabled",
+                    "type": "true_false"
+                },
+                {
+                    "key": "field_t_group_tags",
+                    "name": "tags",
+                    "label": "tags",
+                    "type": "checkbox",
+                    "choices": {
+                        "red": "Red",
+                        "blue": "Blue"
+                    }
+                },
+                {
+                    "key": "field_t_group_photo_ids",
+                    "name": "photo_ids",
+                    "label": "photo_ids",
+                    "type": "gallery",
+                    "return_format": "id"
+                },
+                {
+                    "key": "field_t_group_post",
+                    "name": "post",
+                    "label": "post",
+                    "type": "post_object",
+                    "return_format": "object"
+                },
+                {
+                    "key": "field_t_group_posts",
+                    "name": "posts",
+                    "label": "posts",
+                    "type": "relationship",
+                    "return_format": "object"
+                },
+                {
+                    "key": "field_t_group_photo",
+                    "name": "photo",
+                    "label": "photo",
+                    "type": "image",
+                    "return_format": "array"
+                },
+                {
+                    "key": "field_t_group_attachment",
+                    "name": "attachment",
+                    "label": "attachment",
+                    "type": "file",
+                    "return_format": "array"
+                },
+                {
+                    "key": "field_t_group_photos",
+                    "name": "photos",
+                    "label": "photos",
+                    "type": "gallery",
+                    "return_format": "array"
+                },
+                {
+                    "key": "field_t_group_link",
+                    "name": "link",
+                    "label": "link",
+                    "type": "link",
+                    "return_format": "array"
+                },
+                {
+                    "key": "field_t_group_choice_array",
+                    "name": "choice_array",
+                    "label": "choice_array",
+                    "type": "select",
+                    "choices": {
+                        "red": "Red",
+                        "blue": "Blue"
+                    },
+                    "return_format": "array"
+                },
+                {
+                    "key": "field_t_group_tags_array",
+                    "name": "tags_array",
+                    "label": "tags_array",
+                    "type": "checkbox",
+                    "choices": {
+                        "red": "Red",
+                        "blue": "Blue"
+                    },
+                    "return_format": "array"
+                },
+                {
+                    "key": "field_t_group_author",
+                    "name": "author",
+                    "label": "author",
+                    "type": "user",
+                    "return_format": "array"
+                },
+                {
+                    "key": "field_t_group_authors",
+                    "name": "authors",
+                    "label": "authors",
+                    "type": "user",
+                    "multiple": 1,
+                    "return_format": "array"
+                },
+                {
+                    "key": "field_t_group_color",
+                    "name": "color",
+                    "label": "color",
+                    "type": "color_picker",
+                    "return_format": "array"
+                },
+                {
+                    "key": "field_t_group_day",
+                    "name": "day",
+                    "label": "day",
+                    "type": "date_picker"
+                },
+                {
+                    "key": "field_t_group_map",
+                    "name": "map",
+                    "label": "map",
+                    "type": "google_map"
+                },
+                {
+                    "key": "field_t_group_メモ",
+                    "name": "メモ",
+                    "label": "メモ",
+                    "type": "textarea"
+                },
+                {
+                    "key": "field_t_group_note",
+                    "name": "note",
+                    "label": "note",
+                    "type": "message"
+                },
+                {
+                    "key": "field_t_group_items",
+                    "name": "items",
+                    "label": "items",
+                    "type": "repeater",
+                    "sub_fields": [
+                        {
+                            "key": "field_t_group_items_label",
+                            "name": "label",
+                            "label": "label",
+                            "type": "text"
+                        },
+                        {
+                            "key": "field_t_group_items_term",
+                            "name": "term",
+                            "label": "term",
+                            "type": "taxonomy",
+                            "taxonomy": "category",
+                            "field_type": "select",
+                            "return_format": "object"
+                        }
+                    ]
+                },
+                {
+                    "key": "field_t_group_empty_blocks",
+                    "name": "empty_blocks",
+                    "label": "empty_blocks",
+                    "type": "flexible_content",
+                    "layouts": []
+                }
+            ]
+        },
+        {
+            "key": "field_t_rows_value",
+            "name": "rows_value",
+            "label": "行",
+            "type": "repeater",
+            "sub_fields": [
+                {
+                    "key": "field_t_rows_title",
+                    "name": "title",
+                    "label": "title",
+                    "type": "text"
+                },
+                {
+                    "key": "field_t_rows_choice",
+                    "name": "choice",
+                    "label": "choice",
+                    "type": "select",
+                    "choices": {
+                        "red": "Red",
+                        "blue": "Blue"
+                    }
+                },
+                {
+                    "key": "field_t_rows_amount",
+                    "name": "amount",
+                    "label": "amount",
+                    "type": "number"
+                },
+                {
+                    "key": "field_t_rows_photo_id",
+                    "name": "photo_id",
+                    "label": "photo_id",
+                    "type": "image",
+                    "return_format": "id"
+                },
+                {
+                    "key": "field_t_rows_enabled",
+                    "name": "enabled",
+                    "label": "enabled",
+                    "type": "true_false"
+                },
+                {
+                    "key": "field_t_rows_tags",
+                    "name": "tags",
+                    "label": "tags",
+                    "type": "checkbox",
+                    "choices": {
+                        "red": "Red",
+                        "blue": "Blue"
+                    }
+                },
+                {
+                    "key": "field_t_rows_photo_ids",
+                    "name": "photo_ids",
+                    "label": "photo_ids",
+                    "type": "gallery",
+                    "return_format": "id"
+                },
+                {
+                    "key": "field_t_rows_post",
+                    "name": "post",
+                    "label": "post",
+                    "type": "post_object",
+                    "return_format": "object"
+                },
+                {
+                    "key": "field_t_rows_posts",
+                    "name": "posts",
+                    "label": "posts",
+                    "type": "relationship",
+                    "return_format": "object"
+                },
+                {
+                    "key": "field_t_rows_photo",
+                    "name": "photo",
+                    "label": "photo",
+                    "type": "image",
+                    "return_format": "array"
+                },
+                {
+                    "key": "field_t_rows_attachment",
+                    "name": "attachment",
+                    "label": "attachment",
+                    "type": "file",
+                    "return_format": "array"
+                },
+                {
+                    "key": "field_t_rows_photos",
+                    "name": "photos",
+                    "label": "photos",
+                    "type": "gallery",
+                    "return_format": "array"
+                },
+                {
+                    "key": "field_t_rows_link",
+                    "name": "link",
+                    "label": "link",
+                    "type": "link",
+                    "return_format": "array"
+                },
+                {
+                    "key": "field_t_rows_choice_array",
+                    "name": "choice_array",
+                    "label": "choice_array",
+                    "type": "select",
+                    "choices": {
+                        "red": "Red",
+                        "blue": "Blue"
+                    },
+                    "return_format": "array"
+                },
+                {
+                    "key": "field_t_rows_tags_array",
+                    "name": "tags_array",
+                    "label": "tags_array",
+                    "type": "checkbox",
+                    "choices": {
+                        "red": "Red",
+                        "blue": "Blue"
+                    },
+                    "return_format": "array"
+                },
+                {
+                    "key": "field_t_rows_author",
+                    "name": "author",
+                    "label": "author",
+                    "type": "user",
+                    "return_format": "array"
+                },
+                {
+                    "key": "field_t_rows_authors",
+                    "name": "authors",
+                    "label": "authors",
+                    "type": "user",
+                    "multiple": 1,
+                    "return_format": "array"
+                },
+                {
+                    "key": "field_t_rows_color",
+                    "name": "color",
+                    "label": "color",
+                    "type": "color_picker",
+                    "return_format": "array"
+                },
+                {
+                    "key": "field_t_rows_day",
+                    "name": "day",
+                    "label": "day",
+                    "type": "date_picker"
+                },
+                {
+                    "key": "field_t_rows_map",
+                    "name": "map",
+                    "label": "map",
+                    "type": "google_map"
+                },
+                {
+                    "key": "field_t_rows_メモ",
+                    "name": "メモ",
+                    "label": "メモ",
+                    "type": "textarea"
+                },
+                {
+                    "key": "field_t_rows_note",
+                    "name": "note",
+                    "label": "note",
+                    "type": "message"
+                },
+                {
+                    "key": "field_t_rows_detail",
+                    "name": "detail",
+                    "label": "detail",
+                    "type": "group",
+                    "sub_fields": [
+                        {
+                            "key": "field_t_rows_detail_summary",
+                            "name": "summary",
+                            "label": "summary",
+                            "type": "text"
+                        },
+                        {
+                            "key": "field_t_rows_detail_user",
+                            "name": "user",
+                            "label": "user",
+                            "type": "user",
+                            "return_format": "object"
+                        }
+                    ]
+                },
+                {
+                    "key": "field_t_rows_blocks",
+                    "name": "blocks",
+                    "label": "blocks",
+                    "type": "flexible_content",
+                    "layouts": [
+                        {
+                            "key": "layout_t_rows_quote",
+                            "name": "quote",
+                            "label": "quote",
+                            "sub_fields": [
+                                {
+                                    "key": "field_t_rows_quote_text",
+                                    "name": "text",
+                                    "label": "text",
+                                    "type": "textarea"
+                                }
+                            ]
+                        },
+                        {
+                            "key": "layout_t_rows_blank",
+                            "name": "",
+                            "label": "blank",
+                            "sub_fields": [
+                                {
+                                    "key": "field_t_rows_blank_text",
+                                    "name": "text",
+                                    "label": "text",
+                                    "type": "textarea"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "key": "field_t_sections",
+            "name": "sections",
+            "label": "セクション",
+            "type": "flexible_content",
+            "layouts": [
+                {
+                    "key": "layout_t_hero",
+                    "name": "hero",
+                    "label": "Hero",
+                    "sub_fields": [
+                        {
+                            "key": "field_t_hero_title",
+                            "name": "title",
+                            "label": "title",
+                            "type": "text"
+                        },
+                        {
+                            "key": "field_t_hero_image",
+                            "name": "image",
+                            "label": "image",
+                            "type": "image",
+                            "return_format": "id"
+                        },
+                        {
+                            "key": "field_t_hero_buttons",
+                            "name": "buttons",
+                            "label": "buttons",
+                            "type": "repeater",
+                            "sub_fields": [
+                                {
+                                    "key": "field_t_hero_buttons_link",
+                                    "name": "link",
+                                    "label": "link",
+                                    "type": "link",
+                                    "return_format": "array"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "key": "layout_t_text_block",
+                    "name": "text_block",
+                    "label": "Text block",
+                    "sub_fields": [
+                        {
+                            "key": "field_t_text_block_body",
+                            "name": "body",
+                            "label": "body",
+                            "type": "wysiwyg"
+                        }
+                    ]
+                },
+                {
+                    "key": "layout_t_empty",
+                    "name": "divider",
+                    "label": "Divider",
+                    "sub_fields": []
+                }
+            ]
+        },
+        {
+            "key": "field_t_empty_group",
+            "name": "empty_group",
+            "label": "空のグループ",
+            "type": "group",
+            "sub_fields": [
+                {
+                    "key": "field_t_empty_group_note",
+                    "name": "note",
+                    "label": "note",
+                    "type": "message"
+                }
+            ]
+        },
+        {
+            "key": "field_t_empty_sections",
+            "name": "empty_sections",
+            "label": "レイアウトの無いセクション",
+            "type": "flexible_content",
+            "layouts": []
+        },
+        {
+            "key": "field_t_cloned",
+            "name": "cloned",
+            "label": "複製",
+            "type": "clone",
+            "clone": ["group_clone_source"],
+            "display": "seamless",
+            "prefix_name": 1,
+            "prefix_label": 1
+        },
+        {
+            "key": "field_t_cloned_group",
+            "name": "cloned_group",
+            "label": "複製のグループ",
+            "type": "clone",
+            "clone": ["group_clone_source"],
+            "display": "group",
+            "prefix_name": 1
+        }
+    ]
+}

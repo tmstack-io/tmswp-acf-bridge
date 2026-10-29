@@ -1,0 +1,21 @@
+{
+    "key": "group_genre",
+    "title": "ジャンル",
+    "location": [
+        [
+            {
+                "param": "taxonomy",
+                "operator": "==",
+                "value": "genre"
+            }
+        ]
+    ],
+    "fields": [
+        {
+            "key": "field_genre_color",
+            "name": "genre_color",
+            "label": "色",
+            "type": "color_picker"
+        }
+    ]
+}

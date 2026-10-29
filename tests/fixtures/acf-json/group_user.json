@@ -1,0 +1,21 @@
+{
+    "key": "group_user",
+    "title": "ユーザー",
+    "location": [
+        [
+            {
+                "param": "user_form",
+                "operator": "==",
+                "value": "all"
+            }
+        ]
+    ],
+    "fields": [
+        {
+            "key": "field_user_twitter",
+            "name": "twitter",
+            "label": "X",
+            "type": "url"
+        }
+    ]
+}

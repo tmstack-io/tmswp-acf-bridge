@@ -1,0 +1,22 @@
+{
+    "key": "group_options",
+    "title": "サイト設定",
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "theme-settings"
+            }
+        ]
+    ],
+    "fields": [
+        {
+            "key": "field_logo",
+            "name": "site_logo",
+            "label": "ロゴ",
+            "type": "image",
+            "return_format": "id"
+        }
+    ]
+}

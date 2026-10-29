@@ -1,0 +1,60 @@
+{
+    "key": "group_product",
+    "title": "製品情報",
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "product"
+            }
+        ]
+    ],
+    "fields": [
+        {
+            "key": "field_price",
+            "name": "price",
+            "label": "価格",
+            "type": "number"
+        },
+        {
+            "key": "field_visual",
+            "name": "main_visual",
+            "label": "メイン画像",
+            "type": "image",
+            "return_format": "array"
+        },
+        {
+            "key": "field_published",
+            "name": "published_at",
+            "label": "公開日時",
+            "type": "date_time_picker"
+        },
+        {
+            "key": "field_stores",
+            "name": "stores",
+            "label": "店舗",
+            "type": "repeater",
+            "sub_fields": [
+                {
+                    "key": "field_shop",
+                    "name": "shop_name",
+                    "label": "店舗名",
+                    "type": "text"
+                },
+                {
+                    "key": "field_tel",
+                    "name": "tel",
+                    "label": "TEL",
+                    "type": "text"
+                }
+            ]
+        },
+        {
+            "key": "field_store_name",
+            "name": "店舗名",
+            "label": "店舗名",
+            "type": "text"
+        }
+    ]
+}

@@ -1,0 +1,59 @@
+#!/usr/bin/env php
+<?php
+
+declare(strict_types=1);
+
+// WordPressを起動しないacf-bridgeのsync・check(docs/09 §5.1)。処理はTMSWP\AcfBridge\Cli\TmsAcfにある
+$autoload = $GLOBALS['_composer_autoload_path'] ?? null;
+
+if (!is_string($autoload)) {
+    // Composerのbinの代理を通さずに実行した場合: 依存として入れたとき(vendor/tmswp/acf-bridge/bin)と、monorepo(packages/acf-bridge/bin)と、
+    // このパッケージを単独で取り出して開発するとき(bin)
+    foreach ([__DIR__ . '/../../../autoload.php', __DIR__ . '/../../../vendor/autoload.php', __DIR__ . '/../vendor/autoload.php'] as $candidate) {
+        if (is_file($candidate)) {
+            $autoload = $candidate;
+            break;
+        }
+    }
+}
+
+if (!is_string($autoload)) {
+    fwrite(STDERR, "tms-acf: Composer's vendor/autoload.php was not found; run composer install\n");
+    exit(2);
+}
+
+require $autoload;
+
+$cwd = getcwd();
+
+if ($cwd === false) {
+    fwrite(STDERR, "tms-acf: the current directory is not available\n");
+    exit(2);
+}
+
+// $argvはスクリプトのトップレベルにだけCLIのSAPIが入れる変数で、静的解析からは未定義に見えるため、$_SERVER['argv']を検査して使う
+$argv = $_SERVER['argv'] ?? null;
+
+if (!is_array($argv)) {
+    fwrite(STDERR, "tms-acf: the command line arguments are not available\n");
+    exit(2);
+}
+
+$arguments = [];
+
+foreach (array_slice($argv, 1) as $argument) {
+    if (!is_string($argument)) {
+        fwrite(STDERR, "tms-acf: the command line arguments are not available\n");
+        exit(2);
+    }
+
+    $arguments[] = $argument;
+}
+
+$outcome = (new TMSWP\AcfBridge\Cli\TmsAcf())->run($arguments, $cwd);
+
+foreach ($outcome['lines'] as $line) {
+    fwrite(STDOUT, $line . "\n");
+}
+
+exit($outcome['status']);
