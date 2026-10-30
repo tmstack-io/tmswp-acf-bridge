@@ -9,7 +9,7 @@ use TMSWP\AcfBridge\Generate\NameConverter;
 use TMSWP\AcfBridge\Json\FieldGroup;
 
 /**
- * フィールドグループのlocationを、生成クラスの対象(GenerationTarget)に解決する(docs/09 §4.2)。locationの各ANDグループを
+ * フィールドグループのlocationを、生成クラスの対象(GenerationTarget)に解決する。locationの各ANDグループを
  * 1つの対象に解決し、ORの全ANDグループの対象の和集合を返す。
  */
 final class LocationResolver
@@ -138,7 +138,7 @@ final class LocationResolver
 
             if (\in_array($param, self::UNSUPPORTED_PARAMS, true)) {
                 $warnings[] = $param === 'block'
-                    ? "W006: ACF field group '{$groupKey}' uses unsupported location param 'block'; acf-bridge does not generate accessors for ACF Blocks, so build custom blocks as described in docs/12 §1.11 (D-26)"
+                    ? "W006: ACF field group '{$groupKey}' uses unsupported location param 'block'; acf-bridge does not generate accessors for ACF Blocks, so build custom blocks as described in the tmswp/core recipe rules/blocks.md"
                     : "W006: ACF field group '{$groupKey}' uses unsupported location param '{$param}'";
 
                 return null;
@@ -273,7 +273,7 @@ final class LocationResolver
     }
 
     /**
-     * `{studly($name)}{$suffix}`。studlyが空(ASCIIの英数字が無い名前)なら空にし、生成時のE003にする(docs/09 §4.3)。
+     * `{studly($name)}{$suffix}`。studlyが空(ASCIIの英数字が無い名前)なら空にし、生成時のE003にする。
      */
     private function className(string $name, string $suffix): string
     {

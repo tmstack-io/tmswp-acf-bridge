@@ -13,7 +13,7 @@ use TMSWP\AcfBridge\Mapping\TargetKind;
 use TMSWP\Core\Meta\ObjectType;
 
 /**
- * フィールドグループからACFの管理キー(生成物AcfManifestが返すもの。§7.1)を集める。`wp tmswp acf check`のE101の
+ * フィールドグループからACFの管理キー(生成物AcfManifestが返すもの)を集める。`wp tmswp acf check`のE101の
  * 検査がこれを使う。
  */
 final class ManagedKeyCollector
@@ -53,7 +53,7 @@ final class ManagedKeyCollector
                     TargetKind::Options => null,
                 };
 
-                // トップレベルでサブフィールドに置き換えたseamlessのclone自身の保存名(docs/09 §6.6)
+                // トップレベルでサブフィールドに置き換えたseamlessのclone自身の保存名
                 foreach ($this->cloneMetaKeys($group->raw) as [$metaKey, $fieldKey]) {
                     $keys[] = new ManagedKey($objectType, $target->subtype, $metaKey, $fieldKey, $group->key);
                 }
@@ -65,7 +65,7 @@ final class ManagedKeyCollector
 
                     $keys[] = new ManagedKey($objectType, $target->subtype, $field->name, $field->key, $group->key);
 
-                    // groupのcloneは、サブフィールドの値をそれぞれの保存名のメタに保存する(docs/09 §6.6)
+                    // groupのcloneは、サブフィールドの値をそれぞれの保存名のメタに保存する
                     foreach ($this->cloneMetaKeys($field->raw) as [$metaKey, $fieldKey]) {
                         $keys[] = new ManagedKey($objectType, $target->subtype, $metaKey, $fieldKey, $group->key);
                     }

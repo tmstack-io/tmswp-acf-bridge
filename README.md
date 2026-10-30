@@ -5,7 +5,7 @@ Advanced Custom Fields(ACF)をTMStack WordPress Frameworkで使うための拡�
 ## 動作環境
 
 - PHP 8.3〜8.5、WordPress 7.0以上
-- tmswp/core `^0.9`(composer.jsonの`require`)
+- tmswp/core `^0.9.1`(composer.jsonの`require`)
 - ACF 6.2以上(無料版・Pro)。ACFはWordPressのプラグインとして入れます(Composerの依存にはしません)。repeater・flexible_content・gallery・clone・オプションページはACF Proの機能です。
 
 ## 提供するもの
@@ -63,7 +63,7 @@ return KernelConfig::theme(appDir: __DIR__ . '/app', appNamespace: 'App', extens
 | ユーザー | `UserFields` |
 | オプションページ(`options_page == theme-settings`) | `ThemeSettingsOptions` |
 
-ほかに、ACFで管理するメタのキーの一覧`AcfManifest.php`を生成します。acf-bridgeは実行時にacf-jsonを読まず、この生成物を使います。`acf-json/`の変更と`app/Acf/`の生成物は同じコミットに入れ、CIで`composer acf:check -- --strict`を実行し、生成物をデプロイに含めてください。
+ほかに、ACFで管理するメタのキーの一覧`AcfManifest.php`を生成します。acf-bridgeは実行時にacf-jsonを読まず、この生成物を使います。`acf-json/`の変更と`app/Acf/`の生成物は同じコミットに入れ、CIで`composer acf:check -- --strict`を実行し、生成物をデプロイに含めてください(本番へ上げるものと手順は`vendor/tmswp/core/rules/deploy.md`)。
 
 ## ACFが無効なとき
 
@@ -76,7 +76,7 @@ return KernelConfig::theme(appDir: __DIR__ . '/app', appNamespace: 'App', extens
 - ACFでフィールドを管理する(導入・使い分け・テンプレートでの読み方・flexible_content・`value()`・禁止事項): `vendor/tmswp/core/rules/acf.md`
 - sync・checkの報告(E*・W*・I002・差分)への対処と`BridgeConfig`: `vendor/tmswp/acf-bridge/rules/sync-check.md`
 
-設計の正本は、TMSWPのmonorepo([tmstack-io/tmswp](https://github.com/tmstack-io/tmswp))の`docs/09-acf-bridge.md`です。
+設計の正本は、TMSWPのmonorepo([tmstack-io/tmswp](https://github.com/tmstack-io/tmswp))の[docs/09-acf-bridge.md](https://github.com/tmstack-io/tmswp/blob/v0.9.1/docs/09-acf-bridge.md)です。
 
 ## ライセンス
 

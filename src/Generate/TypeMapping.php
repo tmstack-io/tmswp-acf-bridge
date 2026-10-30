@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace TMSWP\AcfBridge\Generate;
 
 /**
- * 1つのACFのフィールドの、生成アクセサの型と読み方(docs/09 §6.2)。
+ * 1つのACFのフィールドの、生成アクセサの型と読み方。
  */
 final readonly class TypeMapping
 {

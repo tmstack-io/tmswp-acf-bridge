@@ -13,11 +13,11 @@ use WP_CLI;
  * `['tmswp', 'acf', 'check']`)を解析して`WP_CLI::get_runner()->arguments`に置く。そのため、Kernelのinit 6の
  * 時点では、どのコマンドを実行するかが決まっている。
  *
- * @internal AcfBridgeの管理キーの申告(docs/09 §7.3)だけが使う
+ * @internal AcfBridgeの管理キーの申告だけが使う
  */
 final class WpCliProcess
 {
-    /** 管理キーの申告と#[MetaSchema]の重複を、E101として報告するコマンド(docs/09 §5.1・§7.3) */
+    /** 管理キーの申告と#[MetaSchema]の重複を、E101として報告するコマンド */
     private const array CONFLICT_REPORTING_COMMANDS = [
         ['tmswp', 'acf', 'check'],
         ['tmswp', 'acf', 'sync'],

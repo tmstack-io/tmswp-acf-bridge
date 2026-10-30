@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace TMSWP\AcfBridge\Generate;
 
 /**
- * フィールド名・locationの値から、生成クラスのメソッド名・定数名・クラス名の部品を作る(docs/09 §4.3・§5.5)。
+ * フィールド名・locationの値から、生成クラスのメソッド名・定数名・クラス名の部品を作る。
  */
 final class NameConverter
 {

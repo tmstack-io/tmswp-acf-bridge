@@ -7,7 +7,7 @@ namespace TMSWP\AcfBridge\Generate;
 use TMSWP\AcfBridge\Json\FieldDefinition;
 
 /**
- * 1つのトップレベルのフィールドから生成するメンバーの名前と型(docs/09 §5.3)。
+ * 1つのトップレベルのフィールドから生成するメンバーの名前と型。
  */
 final readonly class AccessorDefinition
 {

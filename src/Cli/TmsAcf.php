@@ -10,7 +10,7 @@ use TMSWP\Core\Exception\TmswpExceptionInterface;
 use TMSWP\Core\Kernel\KernelConfig;
 
 /**
- * WordPressを起動しない`vendor/bin/tms-acf <sync|check> [--strict] [--dry-run] [--root=<ルート>]`(docs/09 §5.1)。
+ * WordPressを起動しない`vendor/bin/tms-acf <sync|check> [--strict] [--dry-run] [--root=<ルート>]`。
  *
  * テーマ・プラグインのルート(--rootの既定はカレントディレクトリ)の`tmswp-kernel.php`が返すKernelConfigから、extensionsの
  * AcfBridgeの構成を、WordPressの実行時と同じAcfBridge::configFor()で決め、WP-CLI版と同じSyncRunnerで生成・照合する。
@@ -19,7 +19,7 @@ use TMSWP\Core\Kernel\KernelConfig;
  */
 final class TmsAcf
 {
-    /** テーマ・プラグインのルートの、KernelConfigを返すファイル(D-48) */
+    /** テーマ・プラグインのルートの、KernelConfigを返すファイル。WordPressの実行時とtms-acfが、同じこのファイルから構成を読む */
     public const string KERNEL_FILE = 'tmswp-kernel.php';
 
     private const string USAGE = 'Usage: tms-acf sync [--dry-run] [--root=<path>] | tms-acf check [--strict] [--root=<path>]';

@@ -3,7 +3,7 @@
 
 declare(strict_types=1);
 
-// WordPressを起動しないacf-bridgeのsync・check(docs/09 §5.1)。処理はTMSWP\AcfBridge\Cli\TmsAcfにある
+// WordPressを起動しないacf-bridgeのsync・check。処理はTMSWP\AcfBridge\Cli\TmsAcfにある
 $autoload = $GLOBALS['_composer_autoload_path'] ?? null;
 
 if (!is_string($autoload)) {

@@ -14,16 +14,16 @@ use TMSWP\Core\Exception\InvalidArgumentException;
 use TMSWP\Core\Kernel\Kernel;
 
 /**
- * 生成クラス(`XxxFields`・`XxxOptions`)が使う、ACFの値の読み書きの基盤(docs/09 §11)。
+ * 生成クラス(`XxxFields`・`XxxOptions`)が使う、ACFの値の読み書きの基盤。
  *
  * 公開のエスケープハッチ(has()・value()・rawValue()・update()・delete())はフィールド名でACFを呼ぶ。生成コードが使う
- * 保護のヘルパは、フィールドのkey(生成クラスのKEY_定数)でACFを呼ぶ(docs/09 §6.1)。keyのフィールドがACFに
+ * 保護のヘルパは、フィールドのkey(生成クラスのKEY_定数)でACFを呼ぶ。keyのフィールドがACFに
  * 登録されていなければ、設定の誤りとしてdebugにかかわらずAcfBridgeRuntimeExceptionにする。
  *
- * 型強制のヘルパは、ACFが返した値を次の2つに分けて扱う(docs/09 §6.1)。名前が`Of`で終わるヘルパは、値と、例外と
+ * 型強制のヘルパは、ACFが返した値を次の2つに分けて扱う。名前が`Of`で終わるヘルパは、値と、例外と
  * ログに出す位置(`stores[0].shop_name`の形)を受け取り、group・repeater・flexible_contentの入れ子のサブフィールドに使う。
  * - 未設定(null・false・''。配列の型は空の配列も): 型ごとの未設定の値('' ・[]・false・null)に正規化する。エラーにしない。
- * - 形の不一致(フィールドの型の想定と違う値): エラー方針(docs/00 §5.6)の実行時のデータ取得の失敗として扱う。
+ * - 形の不一致(フィールドの型の想定と違う値): 実行時のデータ取得の失敗として扱う。
  *   生成クラスのKernel(Kernel::forClass())のdebugではAcfBridgeRuntimeExceptionを投げ、本番ではそのKernelのロガーに
  *   errorで記録して未設定の値を返す。listの型(repeater・flexible_contentの行を含む)は要素ごとに検査し、本番では
  *   不一致の要素だけを記録して除く。
@@ -113,7 +113,7 @@ trait AcfFieldAccess
         return delete_field($key, $this->acfId);
     }
 
-    /** keyのフィールドのフォーマット済みの値を、型を強制せずに返す(ACFの未知の型。docs/09 §6.2)。 */
+    /** keyのフィールドのフォーマット済みの値を、型を強制せずに返す(ACFの未知の型)。 */
     protected function acfMixed(string $key): mixed
     {
         $this->acfFieldName(__FUNCTION__, $key);
@@ -405,7 +405,7 @@ trait AcfFieldAccess
     }
 
     /**
-     * cloneが`prefix_name`で保存名を変えたフィールド(docs/09 §6.6)の、フォーマット済みの値。ACFに登録された元の
+     * cloneが`prefix_name`で保存名を変えたフィールドの、フォーマット済みの値。ACFに登録された元の
      * keyの定義を得て、`name`を保存名$nameに差し替えてから読む(ACFのacf_get_meta_field()と同じ形)。元のkeyのまま
      * get_field()で読むと定義の名前(接頭辞の無い名前)のメタを読み、cloneが合成するkeyはACFに登録されないため、
      * どちらのkeyでも保存名の値を読めないためである。型の検査は、受け取った値に*Of()のヘルパを使う。
@@ -645,7 +645,7 @@ trait AcfFieldAccess
 
     /**
      * color_picker(return_formatがarray)の値。ACFは値が無いとき(と色として読めない文字列のとき)もrgba(0,0,0,0)の配列を
-     * 返すため、その配列は未設定としてnullにする(完全に透明な黒を保存した値もnullになる。docs/09 §6.5)。
+     * 返すため、その配列は未設定としてnullにする(完全に透明な黒を保存した値もnullになる)。
      *
      * @return AcfColorRgba|null
      */
@@ -885,7 +885,7 @@ trait AcfFieldAccess
     }
 
     /**
-     * 形の不一致を、エラー方針(docs/00 §5.6)の実行時のデータ取得の失敗として扱う。生成クラスのKernelのdebugでは
+     * 形の不一致を、実行時のデータ取得の失敗として扱う。生成クラスのKernelのdebugでは
      * 例外を投げ、本番ではそのKernelのロガーにerrorで記録して$fallbackを返す。値そのものは記録しない。
      *
      * @template T

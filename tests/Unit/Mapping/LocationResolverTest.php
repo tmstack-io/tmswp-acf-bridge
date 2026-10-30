@@ -218,7 +218,7 @@ final class LocationResolverTest extends UnitTestCase
         self::assertSame(["W003: ACF field group 'group_test' uses a post ID location that cannot be resolved statically"], $warnings);
     }
 
-    /** blockは非対応で、独自ブロックはdocs/12 §1.11(D-26)の方式で作るよう案内する。 */
+    /** blockは非対応で、独自ブロックはtmswp/coreのrules/blocks.mdの方式で作るよう案内する。 */
     public function testItWarnsForUnsupportedLocationParams(): void
     {
         $warnings = [];
@@ -227,7 +227,7 @@ final class LocationResolverTest extends UnitTestCase
         self::assertSame([], (new LocationResolver())->resolveWithWarnings($this->group('widget', 'sidebar'), $this->config(), $warnings));
         self::assertSame([], (new LocationResolver())->resolveWithWarnings($this->group('unknown_param', 'x'), $this->config(), $warnings));
         self::assertSame([
-            "W006: ACF field group 'group_test' uses unsupported location param 'block'; acf-bridge does not generate accessors for ACF Blocks, so build custom blocks as described in docs/12 §1.11 (D-26)",
+            "W006: ACF field group 'group_test' uses unsupported location param 'block'; acf-bridge does not generate accessors for ACF Blocks, so build custom blocks as described in the tmswp/core recipe rules/blocks.md",
             "W006: ACF field group 'group_test' uses unsupported location param 'widget'",
             "W006: ACF field group 'group_test' uses unknown location param 'unknown_param'",
         ], $warnings);

@@ -19,10 +19,11 @@ use TMSWP\AcfBridge\Json\FieldGroup;
 use TMSWP\AcfBridge\Mapping\LocationResolver;
 
 /**
- * acf-jsonからの生成と、outputDirとの照合・書き込み(sync・check。docs/09 §9)。WordPressを使わず、WP-CLIの
- * `wp tmswp acf`とWordPressを起動しない`tms-acf`が、同じこの処理を使う。戻り値の行・終了コード・メッセージの意味は
- * docs/09 §5.1のとおり(sync: 0成功 / 1 E* または書き込みの失敗 / 2環境・設定の誤り、check: 0差分なし / 1差分あり、
- * または--strictでW* あり / 2 E* または環境・設定の誤り)。
+ * acf-jsonからの生成と、outputDirとの照合・書き込み(sync・check)。WordPressを使わず、WP-CLIの
+ * `wp tmswp acf`とWordPressを起動しない`tms-acf`が、同じこの処理を使う。終了コードは次のとおり
+ * (sync: 0成功 / 1 E* または書き込みの失敗 / 2環境・設定の誤り、check: 0差分なし / 1差分あり、
+ * または--strictでW* あり / 2 E* または環境・設定の誤り)。E*・W*のコードの意味は、tmswp/acf-bridgeのレシピ
+ * rules/sync-check.mdの表にある。
  *
  * @internal AcfCommandとtms-acfだけが使う
  */

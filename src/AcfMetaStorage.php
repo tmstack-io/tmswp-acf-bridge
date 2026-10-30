@@ -17,12 +17,12 @@ use WP_Error;
 use WP_Post;
 
 /**
- * MetaBagの読み書きの保存先をACFのフィールドにするMetaStorageInterfaceの実装(docs/09 §8.1)。
+ * MetaBagの読み書きの保存先をACFのフィールドにするMetaStorageInterfaceの実装。
  * `#[UseMetaStorage(AcfMetaStorage::class)]`のエンティティが使う。
  *
  * 読み書きはすべてWpMetaStorageと同じ意味で、メタの行を直接読み書きする。has()はメタの行の有無で判定し、ACFの
  * フィールドのdefault_valueや、register_*_metaの既定値を「ある」としない。書き込みの戻り値・データベースのエラー・
- * slash・nullの扱いもWpMetaStorageの規約(docs/04 §4.5)に従う。ACFの書き込みの関数(update_field()等)は呼ばず、
+ * slash・nullの扱いもWpMetaStorageの規約に従う。ACFの書き込みの関数(update_field()等)は呼ばず、
  * ACFのフィルタ(acf/update_value・acf/pre_update_metadata・acf/pre_delete_metadata等)とアクションは通らない。
  *
  * ACFのフィールドのキー(ACFが見つけるフィールドの名前と同じキー)は、ACFが値をフィールドとして読めるように、
@@ -34,8 +34,7 @@ use WP_Post;
  * どの書き込みの後も(例外になった場合も)、ACFの値のキャッシュ(get_field()が使う)からそのキーを消す。
  *
  * 全メソッドは、対象のIDが1未満ならInvalidArgumentExceptionを(ACFはpost_idの0を現在のループの投稿に置き換え、
- * WordPressのメタの関数は負のIDをabsint()で別のIDにするため)、ACFが有効でなければAcfNotActiveExceptionを投げる
- * (docs/09 §8.1・§10)。
+ * WordPressのメタの関数は負のIDをabsint()で別のIDにするため)、ACFが有効でなければAcfNotActiveExceptionを投げる。
  */
 final class AcfMetaStorage implements MetaStorageInterface
 {
@@ -44,7 +43,7 @@ final class AcfMetaStorage implements MetaStorageInterface
 
     /**
      * set()・delete()で扱えるACFのフィールドの型。ACF 6.2.0と6.8.10で、型のupdate_valueが無いか、次の条件で値を
-     * 変えないもの(docs/09 §8.1の表)。
+     * 変えないもの。
      * - number・range: update_valueは文字列の','を取り除く。','を含む文字列はInvalidArgumentExceptionにする。
      * - select: update_valueは空でない配列の各要素をstrvalする。multipleのフィールドは扱わず、配列の値は
      *   InvalidArgumentExceptionにする。

@@ -20,7 +20,7 @@ use WP_CLI;
 /**
  * `wp tmswp acf sync|check`。対象は`--app=`で選んだKernelに登録したAcfBridgeの構成で、AcfBridgeを登録したKernelが
  * 1つなら`--app=`を省略できる。生成と照合はWordPressを起動しないtms-acfと同じSyncRunnerで行い、WP-CLI版だけが、
- * 起動中のKernelの#[MetaSchema]との重複(E101)も検査する。終了コードはdocs/09 §5.1のとおり(sync: 0成功 / 1 E* または書き込みの失敗 / 2環境・設定の
+ * 起動中のKernelの#[MetaSchema]との重複(E101)も検査する。終了コードは次のとおり(sync: 0成功 / 1 E* または書き込みの失敗 / 2環境・設定の
  * 誤り、check: 0差分なし / 1差分あり、または --strictでW* あり / 2 E* または環境・設定の誤り)。
  */
 final class AcfCommand

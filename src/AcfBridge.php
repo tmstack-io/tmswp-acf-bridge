@@ -161,7 +161,7 @@ final class AcfBridge implements ExtensionInterface
      * 管理キーを、AcfMetaStorageでないエンティティが#[MetaSchema]で宣言済みなら、DuplicateMetaKeyExceptionで止める。
      * ただし`wp tmswp acf check`・`sync`のプロセスでは、そのキーを申告せずに続ける。この2つのコマンドは、重複をE101・
      * exit 2(syncは書き込まずにexit 1)で報告するのが役目で、起動の時点で止めると、AcfManifestがすでにそのキーを持つ
-     * (生成物をコミットした後に#[MetaSchema]を足した)ときに、コマンドに届かず報告できないためである(docs/09 §7.3)。
+     * (生成物をコミットした後に#[MetaSchema]を足した)ときに、コマンドに届かず報告できないためである。
      * ほかのWP-CLIのコマンドと、WP-CLIでないリクエストは止める。
      *
      * @internal Kernelのinit 6から呼ぶ。テストは任意のレジストリに申告させるために呼ぶ

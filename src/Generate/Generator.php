@@ -87,7 +87,7 @@ final class Generator
                 $this->renderClass($bucket, $accessors, $context, $imports),
             );
 
-            // flexible_contentのレイアウトの型の別名(docs/09 §6.4)は、クラスの中で一意に宣言できなければならない
+            // flexible_contentのレイアウトの型の別名は、クラスの中で一意に宣言できなければならない
             foreach ($imports->localAliasConflicts() as $conflict) {
                 $errors[] = "E002: class {$bucket->target->className} cannot declare the layout type aliases of flexible_content fields: {$conflict}; rename the flexible_content field or the layout in ACF";
             }
@@ -850,7 +850,7 @@ final class Generator
     }
 
     /**
-     * cloneの`prefix_name`で、保存名(フィールドの名前)がACFに登録された定義の名前と違うフィールドか(docs/09 §6.6)。
+     * cloneの`prefix_name`で、保存名(フィールドの名前)がACFに登録された定義の名前と違うフィールドか。
      * そのフィールドは、元のkeyの定義を保存名に差し替えて読み書きするヘルパ(acfCloned*())を使う。
      */
     private function hasSavedName(FieldDefinition $field): bool
@@ -892,7 +892,7 @@ final class Generator
 
     /**
      * 管理キーの一覧(AcfManifest)を生成する。管理キーは`wp tmswp acf check`のE101と同じManagedKeyCollectorで集める。
-     * ヘッダは、全入力の集約ハッシュ(source-hash)と、管理キーを持つグループの由来のJSONを記す(docs/09 §7.1)。
+     * ヘッダは、全入力の集約ハッシュ(source-hash)と、管理キーを持つグループの由来のJSONを記す。
      *
      * @param list<FieldGroup> $groups cloneを解決したグループ
      */

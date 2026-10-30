@@ -7,7 +7,7 @@ namespace TMSWP\AcfBridge\Generate;
 use TMSWP\AcfBridge\Json\FieldDefinition;
 
 /**
- * ACFのフィールドの型と設定から、生成アクセサの型と読み方(TypeMapping)を決める(docs/09 §6.2)。
+ * ACFのフィールドの型と設定から、生成アクセサの型と読み方(TypeMapping)を決める。
  *
  * 型の表記の中のクラス(WP_Post・DateTimeInterface等)はClassImports::ref()の参照で、型の別名(AcfImage等)は
  * ClassImports::alias()の名前で書く。shapeのキー(フィールドの名前)とacf_fc_layoutのリテラル(レイアウトの名前)は、

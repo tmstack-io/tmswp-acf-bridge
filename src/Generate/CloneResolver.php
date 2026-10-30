@@ -9,7 +9,7 @@ use TMSWP\AcfBridge\Json\FieldGroup;
 use TMSWP\AcfBridge\Json\FlexibleLayout;
 
 /**
- * acf-jsonのcloneを、ACF Proが実行時にするのと同じ規則で展開する(docs/09 §6.6)。
+ * acf-jsonのcloneを、ACF Proが実行時にするのと同じ規則で展開する。
  *
  * ACF Pro(pro/fields/class-acf-field-clone.php)は、cloneのフィールドを読み込むときに参照先のフィールドを複製して
  * サブフィールドにし(get_cloned_fields()・acf_clone_field())、displayがseamlessのcloneを、フィールドの一覧の中でその

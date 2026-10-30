@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace TMSWP\AcfBridge\Mapping;
 
 /**
- * フィールドグループのlocationの1つのANDグループを解決した、生成クラスの対象(docs/09 §4.1)。
+ * フィールドグループのlocationの1つのANDグループを解決した、生成クラスの対象。
  */
 final readonly class GenerationTarget
 {
@@ -23,7 +23,7 @@ final readonly class GenerationTarget
     ) {}
 
     /**
-     * 生成クラスを分けるキー。テンプレート別のクラスは、投稿タイプによらずテンプレートごとに1つにする(docs/09 §4.3)。
+     * 生成クラスを分けるキー。テンプレート別のクラスは、投稿タイプによらずテンプレートごとに1つにする。
      */
     public function key(): string
     {

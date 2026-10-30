@@ -7,7 +7,7 @@ namespace TMSWP\AcfBridge\Generate;
 use TMSWP\Core\Exception\LogicException;
 
 /**
- * 1つの生成クラスがuseするクラス・`@phpstan-import-type`で取り込む型の別名と、生成コードでの参照の書き方(docs/09 §5.2)。
+ * 1つの生成クラスがuseするクラス・`@phpstan-import-type`で取り込む型の別名と、生成コードでの参照の書き方。
  *
  * 生成クラスの短名と、大文字小文字を区別せずに同じ短名のクラスはuseせず、完全修飾名(先頭に`\`)で参照する。PHPの
  * クラス名は大文字小文字を区別しないため、useするとクラスの宣言と名前が衝突して読み込みがfatalになるためである。
@@ -103,7 +103,7 @@ final class ClassImports
 
     /**
      * 生成クラスが`@phpstan-type`で宣言する型の別名$nameを$typeとして加え、$nameを返す(flexible_contentのレイアウトの
-     * shape。docs/09 §6.4)。同じ名前を違う型で加える場合と、名前が生成クラスの短名・参照するクラス・取り込む型の別名と
+     * shape)。同じ名前を違う型で加える場合と、名前が生成クラスの短名・参照するクラス・取り込む型の別名と
      * 大文字小文字を区別せずに重なる場合は、宣言できないことを記録する(localAliasConflicts())。
      */
     public function localAlias(string $name, string $type): string
