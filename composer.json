@@ -5,10 +5,10 @@
   "license": "GPL-2.0-or-later",
   "require": {
     "php": ">=8.3",
-    "tmswp/core": "^0.9.1"
+    "tmswp/core": "^0.10"
   },
   "require-dev": {
-    "tmswp/testing": "^0.9.1"
+    "tmswp/testing": "^0.10"
   },
   "suggest": {
     "advanced-custom-fields-pro": "ACF Pro 6.2+ をWPプラグインとして導入すること"
@@ -31,7 +31,7 @@
   },
   "extra": {
     "branch-alias": {
-      "dev-main": "0.9.x-dev"
+      "dev-main": "0.10.x-dev"
     }
   },
   "minimum-stability": "stable",

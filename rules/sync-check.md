@@ -108,4 +108,4 @@ return KernelConfig::theme(
 
 - acf-bridgeの導入・生成アクセサの使い方・テンプレートでの読み方・acf-jsonと生成物のコミットの規則: vendor/tmswp/core/rules/acf.md
 - `#[MetaSchema]`と`AcfMetaStorage`(E101の対処): vendor/tmswp/core/rules/meta.mdの「ACFのフィールドグループで管理するキー」
-- 設計の正本(locationの解決表・型の対応表・コード表): TMSWPのmonorepoの[docs/09-acf-bridge.md](https://github.com/tmstack-io/tmswp/blob/v0.9.1/docs/09-acf-bridge.md)
+- 設計の正本(locationの解決表・型の対応表・コード表): TMSWPのmonorepoの[docs/09-acf-bridge.md](https://github.com/tmstack-io/tmswp/blob/v0.10.0/docs/09-acf-bridge.md)
